@@ -9,4 +9,4 @@ function makeImagesTemplate(image) {
     template.innerHTML = html;
     return template.content;
 } 
-export default makeImagesTemplate;
+export default makeImagesTemplate;``
