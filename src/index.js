@@ -1,9 +1,8 @@
-/* eslint-disable */
-const jsdom = require("jsdom");
-const { JSDOM } = jsdom;
-const { window } = new JSDOM(``);
-global.window = window;
-global.document = window.document;
+import images from '../data/images.js';
+import makeImagesTemplate from './makeImageTemplate.js';
 
-require = require('esm')(module);
-module.exports = require("./tests.js");
+const imagesList = document.getElementById('images-list');
+images.forEach(function(image) {
+    const dom = makeImagesTemplate(image);
+    imagesList.appendChild(dom);
+});
